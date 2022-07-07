@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diepafes</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@ionic/core@4.0.0/css/ionic.bundle.css"> 
+  <link rel="stylesheet" href="stylehome.css">
+  <link rel="stylesheet" href="call.css">
+  <script type='text/javascript' src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML=dt;
+  </script>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="diepafes.html">Home</a>
+    <a href="#news">News</a>
+    <a href="#messages">Messages</a>
+    <a href="about.html">About</a>
+ </div>
+
+  <div class="Main_Container">
+    <div class="Video_Container">
+
+       <div class="attendees">
+          <img src='pic.png' >
+          <img src='pic2.png'>
+          <img src='pic3.png'>
+          <img src='pic4.png'>
+          <img src='pic5.png'>
+          <img src='pic6.png'>
+        </div>
+
+        <div class="Video">
+            <video id="vid" autoplay></video>
+             <script>
+               navigator.mediaDevices.getUserMedia({
+               video:{
+                width: 900,
+                height: 500
+               }
+               
+                })
+               .then(stream =>{
+                 document.getElementById("vid").srcObject = stream; 
+                })
+              </script>
+        </div>
+         
+      </div>
+
+
+   
+ 
+            <div class="Chat_Container">
+              <h1>Messages</h1>
+              <div class="chat_box" id="chat_box">
+                 
+
+                 <div class='message'>
+                  <span>Ιωάννα</span>
+                  <p>Ει! Πως πάει;</p>
+                 </div>
+
+                 <div class='message'>
+                  <span>Ερωφίλη</span>
+                  <p>Γεια σας παιδιά!</p>
+                 </div>
+
+                 <div class='message'>
+                  <span>Μαρία</span>
+                  <p>Καλημέρααααα</p>
+                 </div>
+                 <div class='message'>
+                  <span>Γεωργία</span>
+                  <p>Ωπ! Καλώς τους</p>
+                 </div>
+
+                 <div class='message'>
+                  <span>Ελένη</span>
+                  <p>Τι κάνετε;</p>
+                 </div>
+
+                 <div class='message'>
+                  <span>Ειρήνη</span>
+                  <p>Θα ήθελα να κάνω μία ερώτηση</p>
+                 </div>
+                 <div class='message'>
+                  <span>Γιάννης</span>
+                  <p>Όμορφες καλησπέρες</p>
+                 </div>
+
+                 <div class='message'>
+                  <span>Σοφία</span>
+                  <p>Hi!</p>
+                 </div>
+
+                 <div class='message'>
+                  <span>Γιώργος</span>
+                  <p>Καλησπέρα</p>
+                 </div>
+              </div>
+              <div class="message_input_box">
+                <input type='text' id="message_input" placeholder='Write your message...'>
+                <button id="message_submit" type="submit">
+                    <i class="fa-solid fa-paper-plane" style="font-size: 1.98em"></i>
+                </button>
+            </div>
+  
+          <script src="call.js"></script>
+ 
+</body>
+</html> 
+
